@@ -7,13 +7,15 @@ public class Main {
     public static void main(String[] args) {
 
         testOddness();
+        keepContained();
+
 
         // todo even or odd
         // todo keep number contained
         // todo get the last digit
     }
 
-    public static void testOddness(){
+    public static void testOddness() {
 
         Scanner keyboard;
 
@@ -22,13 +24,25 @@ public class Main {
         keyboard = new Scanner(System.in);
 
 
+        System.out.println("Enter a positive number");
+        numberPositive = keyboard.nextInt();
 
-    System.out.println("Enter a positive number");
-    numberPositive = keyboard.nextInt();
 
+        System.out.println("Number is odd: " + (numberPositive % 2 != 0));
+    }
 
-        System.out.println("Number is odd: " + (numberPositive % 2 !=0));
+    public static void keepContained(){
 
+        Scanner keyboard;
+
+        int numberPositive;
+
+        keyboard = new Scanner(System.in);
+
+        System.out.println("Enter a positive number");
+        numberPositive = keyboard.nextInt();
+
+        System.out.println("Number contained is: " + (numberPositive%8+5));
 
 
     }
